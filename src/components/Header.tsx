@@ -159,7 +159,7 @@ export const Header: React.FC<HeaderProps> = ({
           {/* Logo */}
           <Logo
             size="md"
-            spinning={true}
+            spinning={false}
             onClick={() => handleNavClick('home')}
             className="hover:opacity-90 transition min-w-0"
           />
@@ -172,13 +172,13 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                  className={`px-2.5 xl:px-3.5 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
                       ? 'bg-[#EEF4FF] text-[#155EEF] font-semibold'
                       : 'text-[#475467] hover:text-[#101828] hover:bg-[#F7F9FC]'
                   }`}
                 >
-                  {item.icon}
+                  <span className="hidden xl:inline-flex">{item.icon}</span>
                   <span>{item.label}</span>
                 </button>
               );
@@ -188,7 +188,7 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="relative" ref={aboutRef}>
               <button
                 onClick={() => setAboutOpen((open) => !open)}
-                className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                className={`px-2.5 xl:px-3.5 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                   aboutActive
                     ? 'bg-[#EEF4FF] text-[#155EEF] font-semibold'
                     : 'text-[#475467] hover:text-[#101828] hover:bg-[#F7F9FC]'
@@ -196,7 +196,7 @@ export const Header: React.FC<HeaderProps> = ({
                 aria-expanded={aboutOpen}
                 aria-haspopup="true"
               >
-                <Info className="w-4 h-4" />
+                <Info className="w-4 h-4 hidden xl:block" />
                 <span>{t('nav_about_group')}</span>
                 <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${aboutOpen ? 'rotate-180' : ''}`} />
               </button>
@@ -241,13 +241,13 @@ export const Header: React.FC<HeaderProps> = ({
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-all cursor-pointer flex items-center gap-1.5 ${
+                  className={`px-2.5 xl:px-3.5 py-2 rounded-lg text-sm font-medium transition-colors cursor-pointer flex items-center gap-1.5 whitespace-nowrap ${
                     isActive
                       ? 'bg-[#EEF4FF] text-[#155EEF] font-semibold'
                       : 'text-[#475467] hover:text-[#101828] hover:bg-[#F7F9FC]'
                   }`}
                 >
-                  {item.icon}
+                  <span className="hidden xl:inline-flex">{item.icon}</span>
                   <span>{item.label}</span>
                 </button>
               );
@@ -301,7 +301,7 @@ export const Header: React.FC<HeaderProps> = ({
               target="_blank"
               rel="noopener noreferrer"
               aria-label={t('nav_official_whatsapp')}
-              className="btn-whatsapp px-3.5 sm:px-4 py-2 rounded-lg text-sm font-bold flex items-center gap-1.5"
+              className="btn-whatsapp h-10 px-3 sm:px-3.5 rounded-lg text-sm flex items-center gap-2"
             >
               <WhatsAppLogo className="w-4 h-4 fill-white shrink-0" />
               <span className="hidden sm:inline">{WHATSAPP_PHONE}</span>

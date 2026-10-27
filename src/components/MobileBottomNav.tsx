@@ -48,8 +48,8 @@ export const MobileBottomNav: React.FC<MobileBottomNavProps> = ({
           className="flex flex-col items-center justify-center -mt-5 cursor-pointer group"
           aria-label={t('mobile_wa')}
         >
-          <span className="w-12 h-12 rounded-full bg-[#25D366] text-white shadow-[0_4px_16px_rgba(37,211,102,0.35)] flex items-center justify-center border-4 border-white group-active:scale-90 transition-transform">
-            <WhatsAppLogo className="w-6 h-6 fill-white" />
+          <span className="w-12 h-12 rounded-full bg-[#25D366] text-white shadow-[0_4px_12px_rgba(37,211,102,0.28)] flex items-center justify-center border-4 border-white group-active:scale-[0.98] transition-transform">
+            <WhatsAppLogo className="w-6 h-6" />
           </span>
           <span className="text-[10px] font-bold text-[#128C7E] mt-0.5">{t('mobile_wa')}</span>
         </a>

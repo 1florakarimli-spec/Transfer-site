@@ -119,7 +119,7 @@ export const Calculator: React.FC<CalculatorProps> = ({
             <span className="live-dot" />
             <span className="tracking-wide">{t('calc_badge')}</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-black text-[#101828] tracking-tight">{t('calc_h2')}</h2>
+          <h2 className="text-xl sm:text-2xl font-semibold text-[#101828] tracking-tight">{t('calc_h2')}</h2>
         </div>
 
         <button
@@ -243,7 +243,7 @@ export const Calculator: React.FC<CalculatorProps> = ({
                 setFromAmount(isNaN(val) ? 0 : val);
               }}
               placeholder={fromCurrency === 'TRY' ? '5000' : '200'}
-              className="w-full bg-transparent text-3xl sm:text-4xl md:text-5xl font-black text-[#101828] focus:outline-none font-mono tracking-tight tabular-nums placeholder-[#98A2B3]"
+              className="w-full bg-transparent text-3xl sm:text-4xl md:text-5xl font-semibold text-[#101828] focus:outline-none font-mono tracking-tight tabular-nums placeholder-[#98A2B3]"
             />
             <div className="shrink-0 px-3 sm:px-4 py-2 sm:py-2.5 rounded-xl bg-[#EEF4FF] border border-[#E4E7EC] text-[#101828] font-bold text-xs sm:text-base font-mono">
               {fromCurrency === 'TRY' ? '₺ TRY' : '₼ AZN'}
@@ -366,7 +366,7 @@ export const Calculator: React.FC<CalculatorProps> = ({
 
             <div className="text-left sm:text-right">
               {calc.isValidMin ? (
-                <span className="text-3xl sm:text-4xl md:text-5xl font-black text-[#155EEF] font-mono tracking-tight block tabular-nums">
+                <span className="text-3xl sm:text-4xl md:text-5xl font-semibold text-[#155EEF] font-mono tracking-tight block tabular-nums">
                   ~{calc.receivedAmount.toLocaleString('az-AZ', { minimumFractionDigits: 2 })} {calc.toCurrency === 'AZN' ? '₼' : '₺'}
                 </span>
               ) : (
@@ -384,7 +384,7 @@ export const Calculator: React.FC<CalculatorProps> = ({
             href={whatsappUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="w-full btn-whatsapp-premium py-4 px-6 rounded-2xl text-base sm:text-lg font-black shadow-xl flex items-center justify-center cursor-pointer"
+            className="w-full btn-whatsapp-premium py-4 px-6 rounded-2xl text-base sm:text-lg font-semibold shadow-xl flex items-center justify-center cursor-pointer"
           >
             <WhatsAppLogo className="w-5 h-5 sm:w-6 sm:h-6 fill-white shrink-0 mr-2.5" />
             <span>{t('calc_wa_btn')}</span>

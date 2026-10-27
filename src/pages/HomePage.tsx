@@ -120,7 +120,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                   <Sparkles className="w-3.5 h-3.5 text-[#102A56]" />
                   <span>{t('hero_rate2_label')}</span>
                 </span>
-                <span className="font-mono font-black text-[#102A56] bg-[#EEF4FF] px-3 py-1 rounded-lg border border-[#C7D7FD] tabular-nums">
+                <span className="font-mono font-semibold text-[#102A56] bg-[#EEF4FF] px-3 py-1 rounded-lg border border-[#C7D7FD] tabular-nums">
                   1,000 ₺ = {RATE_VIP_PER_1000.toFixed(2)} ₼ ⭐
                 </span>
               </div>
@@ -172,15 +172,15 @@ export const HomePage: React.FC<HomePageProps> = ({
             {/* Quick Metrics Bar */}
             <div className="grid grid-cols-3 gap-2.5 pt-1 text-left">
               <div className="p-3 rounded-xl bg-white border border-[#E4E7EC]">
-                <div className="text-lg sm:text-xl font-black text-[#155EEF] font-mono tabular-nums">100%</div>
+                <div className="text-lg sm:text-xl font-semibold text-[#155EEF] font-mono tabular-nums">100%</div>
                 <div className="text-[10px] sm:text-[11px] text-[#475467] mt-0.5">{t('bar_guarantee')}</div>
               </div>
               <div className="p-3 rounded-xl bg-white border border-[#E4E7EC]">
-                <div className="text-lg sm:text-xl font-black text-[#102A56] font-mono tabular-nums">5–15 Dəq</div>
+                <div className="text-lg sm:text-xl font-semibold text-[#102A56] font-mono tabular-nums">5–15 Dəq</div>
                 <div className="text-[10px] sm:text-[11px] text-[#475467] mt-0.5">{t('hero_metric_speed')}</div>
               </div>
               <div className="p-3 rounded-xl bg-white border border-[#E4E7EC]">
-                <div className="text-lg sm:text-xl font-black text-[#155EEF] font-mono tabular-nums">20 ₺</div>
+                <div className="text-lg sm:text-xl font-semibold text-[#155EEF] font-mono tabular-nums">20 ₺</div>
                 <div className="text-[10px] sm:text-[11px] text-[#475467] mt-0.5">{t('hero_metric_fee')}</div>
               </div>
             </div>
@@ -240,7 +240,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <Percent className="w-3.5 h-3.5" />
             <span>{t('comp_why')}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#101828] tracking-tight">{t('comp_h2')}</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#101828] tracking-tight">{t('comp_h2')}</h2>
           <p className="text-[#475467] text-xs sm:text-sm">{t('comp_desc')}</p>
         </div>
 
@@ -301,7 +301,7 @@ export const HomePage: React.FC<HomePageProps> = ({
             <Award className="w-3.5 h-3.5" />
             <span>{t('dir_badge')}</span>
           </div>
-          <h2 className="text-2xl sm:text-3xl font-black text-[#101828] tracking-tight">{t('dir_h2')}</h2>
+          <h2 className="text-2xl sm:text-3xl font-semibold text-[#101828] tracking-tight">{t('dir_h2')}</h2>
           <p className="text-[#475467] text-xs sm:text-sm">{t('dir_desc')}</p>
         </div>
 
@@ -406,14 +406,14 @@ export const HomePage: React.FC<HomePageProps> = ({
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="p-6 sm:p-8 rounded-2xl bg-[#F7F9FC] border border-[#E4E7EC] space-y-6">
           <div className="text-center max-w-2xl mx-auto space-y-1">
-            <h2 className="text-2xl sm:text-3xl font-black text-[#101828] tracking-tight">{t('steps_h2')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-[#101828] tracking-tight">{t('steps_h2')}</h2>
             <p className="text-[#475467] text-xs sm:text-sm">{t('steps_desc')}</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {/* Step 1 */}
             <div className="p-5 rounded-xl bg-white border border-[#E4E7EC] space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-[#EEF4FF] text-[#155EEF] font-mono font-black flex items-center justify-center text-sm border border-[#93C5FD]">
+              <div className="w-8 h-8 rounded-lg bg-[#EEF4FF] text-[#155EEF] font-mono font-semibold flex items-center justify-center text-sm border border-[#93C5FD]">
                 1
               </div>
               <h3 className="text-sm font-bold text-[#101828]">{t('step1_title')}</h3>
@@ -422,7 +422,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
             {/* Step 2 */}
             <div className="p-5 rounded-xl bg-white border border-[#E4E7EC] space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-[#EEF4FF] text-[#102A56] font-mono font-black flex items-center justify-center text-sm border border-[#93C5FD]">
+              <div className="w-8 h-8 rounded-lg bg-[#EEF4FF] text-[#102A56] font-mono font-semibold flex items-center justify-center text-sm border border-[#93C5FD]">
                 2
               </div>
               <h3 className="text-sm font-bold text-[#101828]">{t('step2_title')}</h3>
@@ -431,7 +431,7 @@ export const HomePage: React.FC<HomePageProps> = ({
 
             {/* Step 3 */}
             <div className="p-5 rounded-xl bg-white border border-[#E4E7EC] space-y-2">
-              <div className="w-8 h-8 rounded-lg bg-[#EEF4FF] text-[#155EEF] font-mono font-black flex items-center justify-center text-sm border border-[#155EEF]/40">
+              <div className="w-8 h-8 rounded-lg bg-[#EEF4FF] text-[#155EEF] font-mono font-semibold flex items-center justify-center text-sm border border-[#155EEF]/40">
                 3
               </div>
               <h3 className="text-sm font-bold text-[#101828]">{t('step3_title')}</h3>
@@ -449,7 +449,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               <Building2 className="w-3.5 h-3.5" />
               <span>{t('banks_badge')}</span>
             </div>
-            <h2 className="text-2xl sm:text-3xl font-black text-[#101828] tracking-tight">{t('banks_h2')}</h2>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-[#101828] tracking-tight">{t('banks_h2')}</h2>
             <p className="text-[#475467] text-xs sm:text-sm">{t('banks_desc')}</p>
           </div>
 
@@ -515,7 +515,7 @@ export const HomePage: React.FC<HomePageProps> = ({
               href={directWhatsAppUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto btn-whatsapp-premium py-3.5 px-8 rounded-xl text-base font-black shadow-xl flex items-center justify-center cursor-pointer"
+              className="w-full sm:w-auto btn-whatsapp-premium py-3.5 px-8 rounded-xl text-base font-semibold shadow-xl flex items-center justify-center cursor-pointer"
             >
               <WhatsAppLogo className="w-5 h-5 fill-white shrink-0 mr-2" />
               <span>{t('guarantee_btn')}: {WHATSAPP_PHONE}</span>

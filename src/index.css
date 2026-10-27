@@ -71,6 +71,15 @@ body {
 }
 
 /* ─── Typography ─────────────────────────────── */
+h1, h2, h3 {
+  letter-spacing: -0.024em;
+  text-wrap: balance;
+}
+h1 { font-weight: 700; line-height: 1.15; }
+h2 { font-weight: 600; line-height: 1.25; }
+h3 { font-weight: 600; line-height: 1.35; }
+p { line-height: 1.6; }
+
 .tabular-nums {
   font-variant-numeric: tabular-nums;
 }
@@ -197,21 +206,25 @@ body {
 }
 .btn-surface:active { transform: translateY(0); }
 
-.btn-whatsapp {
+.btn-whatsapp,
+.btn-whatsapp-premium {
   background: #25D366;
   color: #FFFFFF;
-  font-weight: 700;
-  border: 1px solid #20BA59;
-  box-shadow: 0 1px 2px rgba(37,211,102,0.25), 0 4px 12px rgba(37,211,102,0.20);
-  transition: all 0.18s cubic-bezier(0.16,1,0.3,1);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  min-height: 40px;
+  border: 1px solid #1DAA53;
+  box-shadow: none;
+  transition: background-color 0.15s ease, box-shadow 0.15s ease;
 }
-.btn-whatsapp:hover {
-  background: #20BA59;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.40);
-  transform: translateY(-1px);
+.btn-whatsapp:hover,
+.btn-whatsapp-premium:hover {
+  background: #1DAA53;
+  box-shadow: 0 4px 12px rgba(37,211,102,0.22);
+  transform: none;
 }
-.btn-whatsapp:active { transform: translateY(0); }
-.btn-whatsapp:focus-visible {
+.btn-whatsapp:focus-visible,
+.btn-whatsapp-premium:focus-visible {
   outline: 3px solid rgba(37,211,102,0.35);
   outline-offset: 2px;
 }
@@ -245,20 +258,8 @@ body {
   color: #155EEF;
 }
 
-.btn-whatsapp-premium {
-  background: #25D366;
-  color: #FFFFFF;
-  font-weight: 700;
-  border: 1px solid #20BA59;
-  box-shadow: 0 1px 2px rgba(37,211,102,0.25), 0 4px 12px rgba(37,211,102,0.20);
-  transition: all 0.18s cubic-bezier(0.16,1,0.3,1);
-}
-.btn-whatsapp-premium:hover {
-  background: #20BA59;
-  box-shadow: 0 4px 16px rgba(37,211,102,0.40);
-  transform: translateY(-1px);
-}
-.btn-whatsapp-premium:active { transform: translateY(0); }
+.btn-whatsapp:active,
+.btn-whatsapp-premium:active { transform: none; }
 
 /* ─── Form Inputs ────────────────────────────── */
 .input-field {

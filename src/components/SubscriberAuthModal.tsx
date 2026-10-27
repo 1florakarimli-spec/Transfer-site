@@ -166,7 +166,7 @@ export const SubscriberAuthModal: React.FC<SubscriberAuthModalProps> = ({
             </div>
             <div>
               <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-[#EEF4FF] text-[#155EEF] font-semibold text-xs mb-2 border border-[#C7D7FD]">
-                <span className="w-2 h-2 rounded-full bg-[#00F5D4] animate-pulse" />
+                <span className="w-2 h-2 rounded-full bg-[#12B76A]" />
                 <span>{t('auth_active')}</span>
               </div>
               <h3 className="text-xl font-bold text-[#101828]">{currentSubscriber.name}</h3>

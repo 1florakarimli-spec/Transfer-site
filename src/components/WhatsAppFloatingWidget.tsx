@@ -16,42 +16,36 @@ export const WhatsAppFloatingWidget: React.FC = () => {
     <div className="hidden lg:flex fixed bottom-6 right-6 z-50 flex-col items-end gap-2 pointer-events-auto">
       {/* Popover Bubble */}
       {showTooltip && (
-        <div className="relative bg-white border border-[#E4E7EC] text-[#101828] text-xs py-2 px-3.5 rounded-2xl shadow-2xl backdrop-blur-md flex items-center gap-2.5 max-w-xs">
+        <div className="relative bg-white border border-[#E4E7EC] text-[#101828] text-xs py-2.5 pl-3 pr-3.5 rounded-xl shadow-[0_8px_24px_rgba(16,42,86,0.12)] flex items-center gap-2.5 max-w-xs">
           <button
             onClick={(e) => {
               e.stopPropagation();
               setShowTooltip(false);
             }}
-            className="absolute -top-1.5 -left-1.5 bg-[#EEF4FF] text-[#475467] hover:text-[#101828] rounded-full p-0.5 border border-[#E4E7EC] cursor-pointer"
-            title={t('nav_close')}
+            className="absolute -top-2 -left-2 w-5 h-5 bg-white text-[#475467] hover:text-[#101828] rounded-full border border-[#E4E7EC] cursor-pointer flex items-center justify-center focus-visible:outline-2 focus-visible:outline-[#155EEF]"
+            aria-label={t('nav_close')}
           >
             <X className="w-3 h-3" />
           </button>
-          <div className="w-2 h-2 rounded-full bg-[#00F5D4] animate-ping shrink-0" />
+          <span className="w-2 h-2 rounded-full bg-[#12B76A] shrink-0" />
           <div>
-            <div className="font-bold text-[#155EEF] flex items-center gap-1.5">
+            <div className="font-semibold text-[#102A56] flex items-center gap-1.5">
               <span>{t('wa_live')}</span>
-              <span className="text-[9px] bg-[#EEF4FF] text-[#155EEF] px-1.5 py-0.2 rounded font-mono font-bold">24/7</span>
+              <span className="text-[10px] bg-[#ECFDF5] text-[#027A48] px-1.5 py-0.5 rounded font-semibold">24/7</span>
             </div>
-            <div className="text-[11px] text-[#101828] font-mono font-bold">{WHATSAPP_PHONE}</div>
+            <div className="text-[11px] text-[#475467] font-medium tabular-nums">{WHATSAPP_PHONE}</div>
           </div>
         </div>
       )}
 
-      {/* WhatsApp Circular Button */}
       <a
         href={directWhatsAppUrl}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label={t('guarantee_btn')}
-        className="group relative flex items-center justify-center w-14 h-14 rounded-full bg-[#128C7E] hover:bg-[#25D366] text-white shadow-[0_8px_24px_rgba(18,140,126,0.28)] hover:scale-105 active:scale-95 transition-all duration-300 cursor-pointer border border-[#C7D7FD]"
-        title={`WhatsApp ilə əlaqə: ${WHATSAPP_PHONE}`}
+        aria-label={`${t('guarantee_btn')}: ${WHATSAPP_PHONE}`}
+        className="flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-[0_6px_16px_rgba(37,211,102,0.28)] hover:bg-[#1DAA53] active:scale-[0.98] transition-colors duration-150 cursor-pointer focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-[#25D366]"
       >
-        {/* Pulsing Outer Rings */}
-        <span className="absolute -inset-1 rounded-full bg-[#00F5D4] opacity-25 animate-ping -z-10 group-hover:opacity-50" />
-        <WhatsAppLogo className="w-7 h-7 fill-white" />
-        {/* Status dot */}
-        <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-[#00F5D4] border-2 border-[#07090D]" />
+        <WhatsAppLogo className="w-7 h-7" />
       </a>
     </div>
   );

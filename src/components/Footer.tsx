@@ -29,7 +29,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate }) => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
           {/* Brand info with Flags */}
           <div className="lg:col-span-2 space-y-4">
-            <Logo size="md" spinning={true} onClick={() => onNavigate('home')} />
+            <Logo size="md" spinning={false} onClick={() => onNavigate('home')} />
             <p className="text-[#475467] text-xs sm:text-sm leading-relaxed max-w-sm">
               {t('footer_intro', { name: FOUNDER_NAME, slogan: SLOGAN })}
             </p>
